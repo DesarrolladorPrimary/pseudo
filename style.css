@@ -1,0 +1,192 @@
+:root {
+    --main-bg-color: steelblue; /* Define la variable de color */
+}
+
+body {
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+}
+
+
+/*Estilo general*/
+[class^="ej"]{
+    display: inline-block;
+    align-items: center;
+}
+
+.ej1 > button:hover{
+    background-color: brown;
+    padding: 30px;
+    transition: 1s;
+}
+
+
+.ej2 > a {
+    text-decoration: none;
+    color: black;
+}
+
+.ej2 > a{
+    padding-bottom: 5px;
+}
+
+.oculto{
+    display: none; 
+    padding: 15px;
+    background-color: lightyellow;
+    border: 1px solid gold;
+}
+
+.oculto:target {
+    display: block; 
+}
+
+
+
+.ej3 :first-child{
+    background-color: rgb(200, 249, 23);
+    border: 2px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 3px;
+    font-weight: 20px;
+}
+
+.ej4 > label{
+    display: block;
+    padding: 10px;
+}
+
+
+.ej4 :invalid {
+    padding: 8px;
+    font-size: 10px;
+    color: red;
+    background-color: black;
+}
+
+
+
+.ej5 input[type="email"] {
+  border: 2px solid dodgerblue; 
+  background-color: #e6f2ff; 
+}
+
+
+.ej6 input:focus {
+    border: 3px solid green; 
+    outline: none; 
+}
+
+.ej7 p:only-of-type {
+    color: purple;
+    font-weight: bold;
+    background-color: lightcyan;
+    padding: 5px;
+    border: 1px dashed purple;
+}
+
+.ej7 span:only-of-type {
+    color: darkorange;
+    background-color: lightyellow;
+    padding: 3px;
+    border: 1px dashed darkorange;
+}
+
+.ej8 p:first-of-type {
+    background-color: lightcoral;
+    color: white;
+    padding: 5px;
+    font-style: italic;
+}
+
+
+.ej9 > p{
+    background-color: var(--main-bg-color);
+    color: wheat;
+    padding: 10px;
+}
+
+.ej10 {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center; 
+}
+
+.ej10 ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.ej10 ul li {
+    display: inline-block; 
+    margin: 0 15px; 
+}
+
+.ej10 ul li a {
+    text-decoration: none; 
+    color: #333; 
+    padding: 5px 10px;
+    transition: color 0.3s ease; 
+}
+
+.ej10 ul li a:hover {
+    color: steelblue; 
+}
+
+/* Ejercicio 11: Añade un icono antes de cada título */
+.ej11 h2::before {
+    content: "★ "; /* Icono estrella */
+    color: gold; /* Color del icono */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+    font-size: 1.2em; /* Tamaño del icono */
+}
+
+/* Ejercicio 12: Añade una línea decorativa después de cada párrafo */
+.ej12 ::after {
+    content: ""; /* Contenido vacío */
+    display: block; /* Asegura que la línea ocupe toda la anchura */
+    width: 100%; /* Ancho completo */
+    height: 2px; /* Grosor de la línea */
+    background-color: gray; /* Color de la línea */
+    margin-top: 5px; /* Espacio entre el párrafo y la línea */
+}
+
+/* Ejercicio 13: Botón con efecto de sombra */
+.bton {
+    position: relative; /* Necesario para posicionar ::after */
+    background-color: #007bff; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: transform 0.2s ease; /* Transición suave para el efecto */
+}
+
+.bton::after {
+    content: ""; /* Contenido vacío para la sombra */
+    position: absolute; /* Posiciona la sombra relativa al botón */
+    top: 5px; /* Desplazamiento vertical */
+    left: 5px; /* Desplazamiento horizontal */
+    width: 100%; /* Ancho igual al botón */
+    height: 100%; /* Altura igual al botón */
+    background-color: rgba(0, 0, 0, 0.2); /* Color de la sombra */
+    z-index: -1; /* Coloca la sombra detrás del botón */
+    border-radius: 5px; /* Bordes redondeados para la sombra */
+    transition: top 0.2s ease, left 0.2s ease; /* Transición suave */
+}
+
+
+
+.ej14 blockquote::before {
+    content: "“";
+}
+
+
+.ej14 blockquote::after{
+    content:  "”";
+}
+
+
