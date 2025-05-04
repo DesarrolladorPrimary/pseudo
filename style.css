@@ -1,202 +1,198 @@
 :root {
-    --main-bg-color: steelblue; /* Define la variable de color */
+    /* VARIABLES GLOBALES: Valores reutilizables */
+    --main-bg-color: steelblue; /* Color principal para fondos */
+    --primary-color: #3498db;   /* Color para elementos destacados */
+    --background-color: white;  /* Fondo por defecto */
+    --text-color: black;        /* Color de texto principal */
 }
 
+/* EJERCICIO 1: Estilo básico del cuerpo */
 body {
-    box-sizing: border-box;
-    display: block;
-    text-align: center;
+    box-sizing: border-box;          /* Modelo de caja consistente */
+    display: block;                  /* Mostrar como bloque */
+    text-align: center;              /* Texto centrado */
+    background-color: var(--background-color); /* Usa variable de fondo */
+    color: var(--text-color);       /* Usa variable de color */
 }
 
-
-/*Estilo general*/
-[class^="ej"]{
-    display: inline-block;
-    align-items: center;
+/* MODO OSCURO: Sobreescribe variables cuando se aplica la clase */
+body.dark-theme {
+    --background-color: #121212; /* Fondo oscuro */
+    --text-color: #f5f5f5;       /* Texto claro */
 }
 
-.ej1 > button:hover{
-    background-color: brown;
-    padding: 30px;
-    transition: 1s;
+/* EJERCICIO 2: Botón con efecto hover */
+.ej1 > button:hover {
+    background-color: brown;   /* Fondo marrón al pasar el ratón */
+    padding: 30px;              /* Amplía el botón */
+    transition: 1s;             /* Transición de 1 segundo */
 }
 
-
+/* EJERCICIO 3: Enlaces personalizados */
 .ej2 > a {
-    text-decoration: none;
-    color: black;
+    text-decoration: none;     /* Quita subrayado */
+    color: black;              /* Texto negro */
+}
+.ej2 > a {
+    padding-bottom: 5px;       /* Espaciado adicional */
 }
 
-.ej2 > a{
-    padding-bottom: 5px;
-}
-
-.oculto{
-    display: none; 
+/* EJERCICIO 4: Elemento oculto que aparece al hacer clic en enlace */
+.oculto {
+    display: none;             /* Oculto por defecto */
     padding: 15px;
     background-color: lightyellow;
     border: 1px solid gold;
 }
-
 .oculto:target {
-    display: block; 
+    display: block;            /* Visible cuando es el fragmento de URL */
 }
 
-
-
-.ej3 :first-child{
-    background-color: rgb(200, 249, 23);
+/* EJERCICIO 5: Estilo del primer hijo */
+.ej3 :first-child {
+    background-color: rgb(200, 249, 23); /* Fondo amarillo verdoso */
     border: 2px solid black;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
     padding: 3px;
-    font-weight: 20px;
+    font-weight: 20px;         /* Grosor de fuente (este valor no es válido) */
 }
 
-.ej4 > label{
+/* EJERCICIO 6: Formulario con validación visual */
+.ej4 > label {
     display: block;
     padding: 10px;
 }
-
-
 .ej4 :invalid {
-    padding: 8px;
-    font-size: 10px;
-    color: red;
-    background-color: black;
+    padding: 8px;              /* Relleno reducido */
+    font-size: 10px;           /* Letra pequeña */
+    color: red;                /* Texto rojo */
+    background-color: black;   /* Fondo negro para errores */
 }
 
-
-
+/* EJERCICIO 7: Campo de email personalizado */
 .ej5 input[type="email"] {
-  border: 2px solid dodgerblue; 
-  background-color: #e6f2ff; 
+    border: 2px solid dodgerblue;      /* Borde azul */
+    background-color: #e6f2ff;        /* Fondo claro */
 }
 
-
+/* EJERCICIO 8: Campo enfocado */
 .ej6 input:focus {
-    border: 3px solid green; 
-    outline: none; 
+    border: 3px solid green;   /* Borde verde más grueso */
+    outline: none;             /* Quita el borde predeterminado */
 }
 
+/* EJERCICIO 9: Estilo único para párrafo único */
 .ej7 p:only-of-type {
-    color: purple;
+    color: purple;             /* Texto morado */
     font-weight: bold;
     background-color: lightcyan;
     padding: 5px;
     border: 1px dashed purple;
 }
-
 .ej7 span:only-of-type {
-    color: darkorange;
+    color: darkorange;         /* Texto naranja oscuro */
     background-color: lightyellow;
     padding: 3px;
     border: 1px dashed darkorange;
 }
 
+/* EJERCICIO 10: Primer párrafo del contenedor */
 .ej8 p:first-of-type {
-    background-color: lightcoral;
+    background-color: lightcoral; /* Fondo coral claro */
     color: white;
     padding: 5px;
-    font-style: italic;
+    font-style: italic;       /* Cursiva */
 }
 
-
-.ej9 > p{
-    background-color: var(--main-bg-color);
-    color: wheat;
+/* EJERCICIO 11: Párrafo con variable CSS */
+.ej9 > p {
+    background-color: var(--main-bg-color); /* Usa la variable definida */
+    color: wheat;             /* Texto dorado */
     padding: 10px;
 }
 
+/* EJERCICIO 12: Menú horizontal */
 .ej10 {
     background-color: #f4f4f4;
     padding: 10px 0;
-    text-align: center; 
+    text-align: center;
 }
-
 .ej10 ul {
-    list-style: none; 
+    list-style: none;         /* Quita viñetas */
     padding: 0;
     margin: 0;
 }
-
 .ej10 ul li {
-    display: inline-block; 
-    margin: 0 15px; 
+    display: inline-block;    /* Elementos en línea */
+    margin: 0 15px;
 }
-
 .ej10 ul li a {
-    text-decoration: none; 
-    color: #333; 
+    text-decoration: none;    /* Sin subrayado */
+    color: #333;
     padding: 5px 10px;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease; /* Transición suave */
 }
-
 .ej10 ul li a:hover {
-    color: steelblue; 
+    color: steelblue;         /* Cambia a azul al pasar el ratón */
 }
 
-/* Ejercicio 11: Añade un icono antes de cada título */
+/* EJERCICIO 13: Icono antes de títulos */
 .ej11 h2::before {
-    content: "★ "; /* Icono estrella */
-    color: gold; /* Color del icono */
-    margin-right: 5px; /* Espacio entre el icono y el texto */
-    font-size: 1.2em; /* Tamaño del icono */
+    content: "★ ";            /* Añade una estrella */
+    color: gold;              /* Color dorado */
+    margin-right: 5px;
+    font-size: 1.2em;
 }
 
-/* Ejercicio 12: Añade una línea decorativa después de cada párrafo */
+/* EJERCICIO 14: Línea después de párrafos */
 .ej12 ::after {
-    content: ""; /* Contenido vacío */
-    display: block; /* Asegura que la línea ocupe toda la anchura */
-    width: 100%; /* Ancho completo */
-    height: 2px; /* Grosor de la línea */
-    background-color: gray; /* Color de la línea */
-    margin-top: 5px; /* Espacio entre el párrafo y la línea */
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+    margin-top: 5px;
 }
 
-/* Ejercicio 13: Botón con efecto de sombra */
+/* EJERCICIO 15: Botón con sombra */
 .bton {
-    position: relative; /* Necesario para posicionar ::after */
-    background-color: #007bff; /* Color del botón */
-    color: white; /* Color del texto */
-    border: none; /* Sin bordes */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño del texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: transform 0.2s ease; /* Transición suave para el efecto */
+    position: relative;
+    background-color: #007bff; /* Azul brillante */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
-
 .bton::after {
-    content: ""; /* Contenido vacío para la sombra */
-    position: absolute; /* Posiciona la sombra relativa al botón */
-    top: 5px; /* Desplazamiento vertical */
-    left: 5px; /* Desplazamiento horizontal */
-    width: 100%; /* Ancho igual al botón */
-    height: 100%; /* Altura igual al botón */
-    background-color: rgba(0, 0, 0, 0.2); /* Color de la sombra */
-    z-index: -1; /* Coloca la sombra detrás del botón */
-    border-radius: 5px; /* Bordes redondeados para la sombra */
-    transition: top 0.2s ease, left 0.2s ease; /* Transición suave */
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: -1;
+    border-radius: 5px;
+    transition: top 0.2s ease, left 0.2s ease;
 }
 
-
-
+/* EJERCICIO 16: Citas con comillas */
 .ej14 blockquote::before {
-    content: "“";
+    content: "“";             /* Comilla de apertura */
+}
+.ej14 blockquote::after {
+    content: "”";             /* Comilla de cierre */
 }
 
-
-.ej14 blockquote::after{
-    content:  "”";
-}
-
-
+/* EJERCICIO 17: Input con ícono */
 .input-icon {
     position: relative;
     display: inline-block;
 }
-
 .input-icon::before {
-    content: "🔍"; /* Ícono de lupa */
+    content: "🔍";            /* Ícono de lupa */
     position: absolute;
     left: 10px;
     top: 50%;
@@ -204,9 +200,8 @@ body {
     font-size: 16px;
     color: #888;
 }
-
 .input-icon input {
-    padding-left: 30px; /* Espacio para el ícono */
+    padding-left: 30px;       /* Espacio para el ícono */
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -214,7 +209,7 @@ body {
     width: 200px;
 }
 
-
+/* EJERCICIO 18: Imagen con movimiento */
 .ej16 img {
     position: relative;
     width: 250px;
@@ -222,29 +217,142 @@ body {
     left: 5px;
     transition: all 0.3s ease;
 }
-
-
-.ej16 img:hover{
-    top: 20px;
+.ej16 img:hover {
+    top: 20px;                /* Mueve la imagen al hacer hover */
     left: 15px;
 }
 
-
-
-.card-17{
-    background-color: #567bff36;
+/* EJERCICIO 19: Tarjeta centrada */
+.card-17 {
+    display: block;
+    margin: 0 auto;
+    background-color: #abb7e036;
     border-radius: 10px;
-    margin-left: 50px;
     width: 260px;
-    height: 400px;
-    border: 3px rgba(0, 0, 0,) solid;
-    padding: 5px;
+    height: 430px;
+    border: 3px rgba(0, 0, 0,10) solid;
+}
+.card-17 img {
+    position: relative;
+    padding-top: 10px;
+    object-fit: cover;
+    width: 200px;
+    height: 380px;
+}
+.btn-el {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.btn-el:focus {
+    text-align: center;
+    border: #333 2px solid;
+    border-radius:10px;
+    position: absolute;
+    background-color: rgb(255, 6, 6);
+    color: rgb(44, 0, 78);
+    content: "";
+    left: 200px;
 }
 
-.card-17 img{
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    object-fit: cover;
-    width: 220px;
+/* EJERCICIO 20: Navbar fijo */
+.ej18 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-bg-color, steelblue);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+.ej18 .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ej18 .navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.ej18 .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+.ej18 .navbar ul li a:hover {
+    color: lightgray;
+}
+
+/* EJERCICIO 21: Dos cajas superpuestas */
+.ej19 .box-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+}
+.ej19 .box1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    z-index: 1;
+}
+.ej19 .box2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: coral;
+    z-index: 2;
+}
+
+/* EJERCICIO 22: Tarjeta centrada vertical y horizontalmente */
+.ej20 {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+.ej20 .centered-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* EJERCICIO 23: Botón con variable primaria */
+.ej21 .primary-btn {
+    background-color: var(--primary-color); /* Usa la variable */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* EJERCICIO 24: Botón con valor por defecto */
+.ej23 .fallback-btn {
+    background-color: var(--secondary-color, orange); /* Usa naranja si no existe la variable */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* EJERCICIO 25: Tarjeta con variables internas */
+.ej24 .card {
+    --card-bg-color: #f9f9f9;     /* Variable local */
+    --card-text-color: #333;
+    background-color: var(--card-bg-color);
+    color: var(--card-text-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
