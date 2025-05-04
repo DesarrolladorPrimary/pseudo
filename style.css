@@ -6,7 +6,7 @@
     --text-color: black;        /* Color de texto principal */
 }
 
-/* EJERCICIO 1: Estilo básico del cuerpo */
+/* Body - Estilo básico del cuerpo */
 body {
     box-sizing: border-box;          /* Modelo de caja consistente */
     display: block;                  /* Mostrar como bloque */
@@ -21,14 +21,14 @@ body.dark-theme {
     --text-color: #f5f5f5;       /* Texto claro */
 }
 
-/* EJERCICIO 2: Botón con efecto hover */
+/* EJERCICIO 1: Botón con efecto hover */
 .ej1 > button:hover {
     background-color: brown;   /* Fondo marrón al pasar el ratón */
     padding: 30px;              /* Amplía el botón */
     transition: 1s;             /* Transición de 1 segundo */
 }
 
-/* EJERCICIO 3: Enlaces personalizados */
+/* EJERCICIO 2: Enlaces personalizados */
 .ej2 > a {
     text-decoration: none;     /* Quita subrayado */
     color: black;              /* Texto negro */
@@ -37,7 +37,7 @@ body.dark-theme {
     padding-bottom: 5px;       /* Espaciado adicional */
 }
 
-/* EJERCICIO 4: Elemento oculto que aparece al hacer clic en enlace */
+/* EJERCICIO 2: Elemento oculto que aparece al hacer clic en enlace */
 .oculto {
     display: none;             /* Oculto por defecto */
     padding: 15px;
@@ -48,7 +48,7 @@ body.dark-theme {
     display: block;            /* Visible cuando es el fragmento de URL */
 }
 
-/* EJERCICIO 5: Estilo del primer hijo */
+/* EJERCICIO 3: Estilo del primer hijo */
 .ej3 :first-child {
     background-color: rgb(200, 249, 23); /* Fondo amarillo verdoso */
     border: 2px solid black;
@@ -57,7 +57,7 @@ body.dark-theme {
     font-weight: 20px;         /* Grosor de fuente (este valor no es válido) */
 }
 
-/* EJERCICIO 6: Formulario con validación visual */
+/* EJERCICIO 4: Formulario con validación visual */
 .ej4 > label {
     display: block;
     padding: 10px;
@@ -69,19 +69,19 @@ body.dark-theme {
     background-color: black;   /* Fondo negro para errores */
 }
 
-/* EJERCICIO 7: Campo de email personalizado */
+/* EJERCICIO 5: Campo de email personalizado */
 .ej5 input[type="email"] {
     border: 2px solid dodgerblue;      /* Borde azul */
     background-color: #e6f2ff;        /* Fondo claro */
 }
 
-/* EJERCICIO 8: Campo enfocado */
+/* EJERCICIO 6: Campo enfocado */
 .ej6 input:focus {
     border: 3px solid green;   /* Borde verde más grueso */
     outline: none;             /* Quita el borde predeterminado */
 }
 
-/* EJERCICIO 9: Estilo único para párrafo único */
+/* EJERCICIO 7: Estilo único para párrafo único */
 .ej7 p:only-of-type {
     color: purple;             /* Texto morado */
     font-weight: bold;
@@ -96,7 +96,7 @@ body.dark-theme {
     border: 1px dashed darkorange;
 }
 
-/* EJERCICIO 10: Primer párrafo del contenedor */
+/* EJERCICIO 8: Primer párrafo del contenedor */
 .ej8 p:first-of-type {
     background-color: lightcoral; /* Fondo coral claro */
     color: white;
@@ -104,14 +104,14 @@ body.dark-theme {
     font-style: italic;       /* Cursiva */
 }
 
-/* EJERCICIO 11: Párrafo con variable CSS */
+/* EJERCICIO 9: Párrafo con variable CSS */
 .ej9 > p {
     background-color: var(--main-bg-color); /* Usa la variable definida */
     color: wheat;             /* Texto dorado */
     padding: 10px;
 }
 
-/* EJERCICIO 12: Menú horizontal */
+/* EJERCICIO 10: Menú horizontal */
 .ej10 {
     background-color: #f4f4f4;
     padding: 10px 0;
@@ -136,7 +136,7 @@ body.dark-theme {
     color: steelblue;         /* Cambia a azul al pasar el ratón */
 }
 
-/* EJERCICIO 13: Icono antes de títulos */
+/* EJERCICIO 11: Icono antes de títulos */
 .ej11 h2::before {
     content: "★ ";            /* Añade una estrella */
     color: gold;              /* Color dorado */
@@ -144,7 +144,7 @@ body.dark-theme {
     font-size: 1.2em;
 }
 
-/* EJERCICIO 14: Línea después de párrafos */
+/* EJERCICIO 12: Línea después de párrafos */
 .ej12 ::after {
     content: "";
     display: block;
@@ -154,7 +154,7 @@ body.dark-theme {
     margin-top: 5px;
 }
 
-/* EJERCICIO 15: Botón con sombra */
+/* EJERCICIO 13: Botón con sombra */
 .bton {
     position: relative;
     background-color: #007bff; /* Azul brillante */
@@ -178,7 +178,7 @@ body.dark-theme {
     transition: top 0.2s ease, left 0.2s ease;
 }
 
-/* EJERCICIO 16: Citas con comillas */
+/* EJERCICIO 14: Citas con comillas */
 .ej14 blockquote::before {
     content: "“";             /* Comilla de apertura */
 }
@@ -186,7 +186,7 @@ body.dark-theme {
     content: "”";             /* Comilla de cierre */
 }
 
-/* EJERCICIO 17: Input con ícono */
+/* EJERCICIO 15: Input con ícono */
 .input-icon {
     position: relative;
     display: inline-block;
@@ -209,7 +209,7 @@ body.dark-theme {
     width: 200px;
 }
 
-/* EJERCICIO 18: Imagen con movimiento */
+/* EJERCICIO 16: Imagen con movimiento */
 .ej16 img {
     position: relative;
     width: 250px;
@@ -222,7 +222,7 @@ body.dark-theme {
     left: 15px;
 }
 
-/* EJERCICIO 19: Tarjeta centrada */
+/* EJERCICIO 17: Tarjeta centrada */
 .card-17 {
     display: block;
     margin: 0 auto;
@@ -254,7 +254,7 @@ body.dark-theme {
     left: 200px;
 }
 
-/* EJERCICIO 20: Navbar fijo */
+/* EJERCICIO 18: Navbar fijo */
 .ej18 .navbar {
     position: fixed;
     top: 0;
@@ -284,7 +284,7 @@ body.dark-theme {
     color: lightgray;
 }
 
-/* EJERCICIO 21: Dos cajas superpuestas */
+/* EJERCICIO 19: Dos cajas superpuestas */
 .ej19 .box-container {
     position: relative;
     width: 300px;
@@ -306,7 +306,7 @@ body.dark-theme {
     z-index: 2;
 }
 
-/* EJERCICIO 22: Tarjeta centrada vertical y horizontalmente */
+/* EJERCICIO 20: Tarjeta centrada vertical y horizontalmente */
 .ej20 {
     position: relative;
     height: 400px;
@@ -326,7 +326,7 @@ body.dark-theme {
     text-align: center;
 }
 
-/* EJERCICIO 23: Botón con variable primaria */
+/* EJERCICIO 21: Botón con variable primaria */
 .ej21 .primary-btn {
     background-color: var(--primary-color); /* Usa la variable */
     color: white;
@@ -336,7 +336,10 @@ body.dark-theme {
     cursor: pointer;
 }
 
-/* EJERCICIO 24: Botón con valor por defecto */
+/* Ejercicio 22: En html*/
+
+
+/* EJERCICIO 23: Botón con valor por defecto */
 .ej23 .fallback-btn {
     background-color: var(--secondary-color, orange); /* Usa naranja si no existe la variable */
     color: white;
@@ -346,7 +349,7 @@ body.dark-theme {
     cursor: pointer;
 }
 
-/* EJERCICIO 25: Tarjeta con variables internas */
+/* EJERCICIO 24: Tarjeta con variables internas */
 .ej24 .card {
     --card-bg-color: #f9f9f9;     /* Variable local */
     --card-text-color: #333;
