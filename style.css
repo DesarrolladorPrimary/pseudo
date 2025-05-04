@@ -190,3 +190,61 @@ body {
 }
 
 
+.input-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.input-icon::before {
+    content: "🔍"; /* Ícono de lupa */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888;
+}
+
+.input-icon input {
+    padding-left: 30px; /* Espacio para el ícono */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 35px;
+    width: 200px;
+}
+
+
+.ej16 img {
+    position: relative;
+    width: 250px;
+    top: 10px;
+    left: 5px;
+    transition: all 0.3s ease;
+}
+
+
+.ej16 img:hover{
+    top: 20px;
+    left: 15px;
+}
+
+
+
+.card-17{
+    background-color: #567bff36;
+    border-radius: 10px;
+    margin-left: 50px;
+    width: 260px;
+    height: 400px;
+    border: 3px rgba(0, 0, 0,) solid;
+    padding: 5px;
+}
+
+.card-17 img{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    object-fit: cover;
+    width: 220px;
+}
